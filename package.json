@@ -1,0 +1,33 @@
+{
+  "name": "contribute-to-open-source",
+  "description": "Learn how to contribute to open source projects on GitHub",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danthareja/contribute-to-open-source.git"
+  },
+  "engine": {
+    "node": ">=6.0.0"
+  },
+  "keywords": [],
+  "author": "Dan Thareja <danthareja@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danthareja/contribute-to-open-source/issues"
+  },
+  "homepage": "https://github.com/danthareja/contribute-to-open-source#readme",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "test": "mocha --require test/setup.js src/**/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.2",
+    "sinon-chai": "^2.10.0"
+  }
+}
