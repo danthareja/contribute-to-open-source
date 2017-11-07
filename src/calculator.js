@@ -1,5 +1,5 @@
 exports._check = (...items) => {
-  items.forEach(item => {
+  items.forEach((item) => {
     if (typeof item !== 'number') {
       throw new TypeError(`${item} is not a number`);
     }
