@@ -146,8 +146,8 @@ $ git push origin master
 
 1. Find the [New Pull Request](https://github.com/danthareja/contribute-to-open-source/compare/) button
 2. Select the option to **compare across forks**
-3. Select **your username** as the `base` branch and **your fork** as the `head fork`:
-![pr](https://cloud.githubusercontent.com/assets/6980359/26605558/64484b96-4543-11e7-974a-9d2a4c495406.png)
+3. Select **your username** as the `base` branch and **your username** as the `head fork`
+![pr](https://user-images.githubusercontent.com/6980359/32564814-90b55e68-c472-11e7-8901-ae03d8151cb0.png)
 4. Click **Create Pull Request**
 
 ## License
