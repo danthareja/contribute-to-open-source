@@ -7,20 +7,15 @@ exports._check = (x, y) => {
   }
 };
 
-exports.add = (x, y) => {
-  return exports._check(x, y) || (x + y);
-};
+exports.add = (x, y) => exports._check(x, y) || (x + y);
 
-exports.subtract = (x, y) => {
-  return exports._check(x, y) || (x - y);
-};
 
-exports.multiply = (x, y) => {
-  return exports._check(x, y) || (x * y);
-};
+exports.subtract = (x, y) => exports._check(x, y) || (x - y);
 
-exports.divide = (x, y) => {
-  return exports._check(x, y) || (x / y);
-};
+
+exports.multiply = (x, y) => exports._check(x, y) || (x * y);
+
+
+exports.divide = (x, y) => exports._check(x, y) || (x / y);
 
 module.exports = exports;
