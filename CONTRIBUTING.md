@@ -8,7 +8,7 @@ Thanks for your interest in contributing! Please read carefully through our guid
 
 ## Code of Conduct
 
-In order to hold a safe space for all contributors, we expect all project participants to adhere to our Code of Conduct. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+To hold a safe space for all contributors, we expect all project participants to adhere to our Code of Conduct. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ## Issue Tracking
 
@@ -26,7 +26,7 @@ Our linter will catch most styling issues that may exist in your code. You can c
 
 In order to contribute to a project on GitHub, you must first get a copy of the project running locally on your computer. This process is sometimes called a "build process", and every project's process will have different requirements. Some requirements are due to the project being hosted on GitHub, some are due to the programming language used, some are due to the project's dependencies.
 
-There are five steps to build this project:
+There are five steps to building this project:
 
 1. [Set up Git and Install Node.js](#set-up-git-and-install-nodejs)
 1. [Fork the repository](#fork-the-repository)
@@ -38,11 +38,11 @@ Once you get the project built, see if you can fix some [issues](https://github.
 
 ### Set up Git and Install Node.js
 
-> **If you've never written JavaScript before, don't sweat!** This exercises only requires fundamental language skills, you should be able to adapt from your favorite language.
+> **If you've never written JavaScript before, don't sweat!** This exercises only require fundamental language skills, you should be able to adapt from your favorite language.
 
 All GitHub projects are backed by a version control software called *Git*. You'll need to [set up Git](https://github.com/danthareja/contribute-to-open-source/wiki/Setting-up-Git) in order to contribute to *any* project on GitHub.
 
-This specific project is written in JavaScript, and uses Node.js as it's runtime. You'll need to [install Node.js](https://nodejs.org/en/) in order to run the project.
+This specific project is written in JavaScript and uses Node.js as it's runtime. You'll need to [install Node.js](https://nodejs.org/en/) in order to run the project.
 
 ### Fork the repository
 
@@ -62,9 +62,9 @@ $ git clone https://github.com/YOUR-USERNAME/contribute-to-open-source
 
 ### Install dependencies
 
-Did you know that not all code in a project is usually written by the author?
+Did you know that the author usually writes not all code in a project?
 
-The beauty of open source is that you can install and use code that other people have written, allowing you to focus on the unique requirements of your project. Third-party code that your project installs is called a *dependency*, because it is required to work.
+The beauty of open source is that you can install and use code that other people have written, allowing you to focus on the unique requirements of your project. Third-party code that your project installs is called a *dependency* because it is required to work.
 
 This project uses [npm](https://www.npmjs.com/), a command-line tool bundled with Node.js, to maintain third-party dependencies.
 
@@ -102,12 +102,12 @@ $ npm test -- --watch
 
 Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue the in the main project, you *want* to change to the original code. A *pull request* is a GitHub feature that lets you do just that!
 
-There are 3 steps to submitting a pull request:
+There are three steps to submitting a pull request:
 1. [Save your changes locally](#save-your-changes-locally)
 2. [Send your changes to your fork](#send-your-changes-to-your-fork)
 3. [Open a Pull Request](#open-a-pull-request)
 
-These instructions are designed to explain the bare minimum steps in a beginner-friendly way. If you find yourself hungry for more details (or get stuck), I applaud and encourage you to continue research on your own. You'll find no lack of amazing articles about this topic.
+These instructions are designed to explain the bare minimum steps in a beginner-friendly way. If you find yourself hungry for more details (or get stuck), I applaud and encourage you to continue research on your own. You'll find no lack of amazing articles on this topic.
 
 ### Save your changes locally
 
@@ -132,7 +132,7 @@ Finally, save your staged files.
 $ git commit -m "Implement _check"
 ```
 
-You'll often hear this process called *commiting* changes. It's the exact same thing.
+You'll often hear this process called *committing* changes. It's the exact same thing.
 
 ### Send your changes to your fork
 
