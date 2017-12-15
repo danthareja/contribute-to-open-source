@@ -1,7 +1,7 @@
-let x;
-let y;
 module.exports = exports;
 exports._check = () => {
+  let x;
+  let y;
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
