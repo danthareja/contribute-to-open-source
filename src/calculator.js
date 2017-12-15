@@ -8,16 +8,16 @@ exports._check = () => {
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
-}
+};
 exports.add = (x, y) => {
   return x + y;
-}
+};
 exports.subtract = (x, y) => {
   return x - y;
-}
+};
 exports.multiply = (x, y) => {
   return x * y;
-}
+};
 exports.divide = (x, y) => {
   return x / y;
-}
+};
