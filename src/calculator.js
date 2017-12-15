@@ -27,5 +27,3 @@ exports.divide = (x, y) => {
   exports._check();
   return x / y;
 };
-
-
