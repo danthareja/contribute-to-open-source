@@ -24,6 +24,10 @@ exports.multiply = (x, y) => {
 
 exports.divide = (x, y) => {
   exports._check(x, y);
+  // handling the zero division error
+  if (y === 0) {
+    throw new TypeError('cant divide by zero');
+  }
   return x / y;
 };
 
