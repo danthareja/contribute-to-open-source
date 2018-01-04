@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe.only('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -113,7 +113,7 @@ describe('multiply', () => {
   });
 });
 
-describe('divide', () => {
+describe.only('divide', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.divide(40, '2')).to.throw(TypeError);
     expect(() => calculator.divide(40, [])).to.throw(TypeError);
@@ -133,5 +133,8 @@ describe('divide', () => {
 
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
+  });
+  it('should not divide by 0', () => {
+    expect(() => calculator.divide(5, 0)).to.throw(Error);
   });
 });
