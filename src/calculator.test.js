@@ -1,7 +1,18 @@
-/* eslint-disable no-unused-expressions */
+
+exports._check = () => {
+  // DRY up the codebase with this function
+  // First, move the duplicate error checking code here
+  // Then, invoke this function inside each of the others
+  // HINT: you can invoke this function with exports._check()
+};* eslint-disable no-uexports._check = () => {
+  // DRY up the codebase with this function
+  // First, move the duplicate error checking code here
+  // Then, invoke this function inside each of the others
+  // HINT: you can invoke this function with exports._check()
+};nused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
