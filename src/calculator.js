@@ -18,8 +18,8 @@ exports.add = (x, y) => {
   return x + y;
 };
 
-exports.subtract = (x, y) => {
-  exports._check(x,y)
+exports.subtract = (z, y) => {
+  exports._check(z,y)
   return x - y;
 };
 
