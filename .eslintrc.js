@@ -14,6 +14,5 @@ module.exports = {
   ],
   "rules": {
     "no-underscore-dangle": 0,
-   "linebreak-style": ["error", "windows"]
   }
 };
