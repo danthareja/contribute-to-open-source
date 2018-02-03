@@ -9,4 +9,4 @@ test:
     - npm test --silent -- --reporter json > $CIRCLE_TEST_REPORTS/reports/mocha.json
 notify:
   webhooks:
-    - url: https://alz3i17w81.execute-api.us-west-1.amazonaws.com/prod/hooks/circleci
+    - url: https://p6bex1idt3.execute-api.us-west-1.amazonaws.com/prod/hooks/circleci
