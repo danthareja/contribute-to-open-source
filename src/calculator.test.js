@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
+var expect = require("chai").expect;
 
 describe.skip('_check', () => {
   beforeEach(() => {
