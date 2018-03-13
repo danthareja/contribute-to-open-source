@@ -13,7 +13,7 @@ exports.add = (x, y) => {
 };
 
 exports.subtract = (x, y) => {
-  exports._check(x ,y);
+  exports._check(x, y);
   return x - y;
 };
 
