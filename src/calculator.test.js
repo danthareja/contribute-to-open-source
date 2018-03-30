@@ -4,12 +4,10 @@ const calculator = require('./calculator');
 describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
-  });  
-  
+  });
   afterEach(() => {
     calculator._check.restore();
   });
-
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator._check(40, '2')).to.throw(TypeError);
     expect(() => calculator._check(40, [])).to.throw(TypeError);
