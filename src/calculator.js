@@ -44,5 +44,14 @@ exports.divide = (x, y) => {
   }
   return x / y;
 };
+exports.modulo = (x,y) => {
+  if(typeof x!=='number'){
+    throw new TypeError(`${x}is not a number`);
+  }
+  if(typeof y!=='number'){
+    throw new TypwError(`${y}is not a number`);
+  }
+  return x % y;
+};
 
 module.exports = exports;
