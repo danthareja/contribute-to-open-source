@@ -5,7 +5,7 @@ exports._check = (x, y) => {
 
 exports._throwError = (x) => {
   if (typeof x !== 'number') {
-    throw new TypeError('${x} is not a number');
+    throw new TypeError(`${x} is not a number`);
   }
 };
 
