@@ -1,13 +1,13 @@
 exports._check = (x, y) => {
-    exports._throwError(x);
-	exports._throwError(y);
+  exports._throwError(x);
+  exports._throwError(y);
 };
 
 exports._throwError = (x) => {
-	if (typeof x !== 'number') {
-		throw new TypeError('${x} is not a number');
-	}
-;}
+  if (typeof x !== 'number') {
+    throw new TypeError('${x} is not a number');
+  }
+};
 
 exports.add = (x, y) => {
   exports._check(x, y);
