@@ -1,4 +1,4 @@
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![PRs not welcome](https://img.shields.io/badge/PRs-not%20welcome-red.svg)](CONTRIBUTING.md)
 
 # Contribute to Open Source
 
