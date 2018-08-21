@@ -8,7 +8,7 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-exports._check(x, y);
+  exports._check(x, y);
   return x + y;
 };
 
