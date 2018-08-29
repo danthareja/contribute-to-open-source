@@ -3,6 +3,7 @@ exports._check = () => {
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
+  return;
 };
 
 exports.add = (x, y) => {
