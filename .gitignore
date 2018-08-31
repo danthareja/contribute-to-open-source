@@ -56,3 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# directory to play with code 
+playground/
