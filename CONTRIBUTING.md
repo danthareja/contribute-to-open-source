@@ -100,7 +100,7 @@ $ npm test -- --watch
 
 ## Submit a Pull Request
 
-Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue the in the main project, you *want* to change to the original code. A *pull request* is a GitHub feature that lets you do just that!
+Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue in the main project, you *want* to change to the original code. A *pull request* is a GitHub feature that lets you do just that!
 
 There are three steps to submitting a pull request:
 1. [Save your changes locally](#save-your-changes-locally)
