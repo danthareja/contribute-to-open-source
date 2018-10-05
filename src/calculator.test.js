@@ -135,3 +135,18 @@ describe('divide', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
 });
+
+describe('square', () => {
+  it('should throw a TypeError if argument is not a number', () => {
+    expect(() => calculator.square('2')).to.throw(TypeError);
+    expect(() => calculator.square([])).to.throw(TypeError);
+    expect(() => calculator.square({})).to.throw(TypeError);
+  });
+  it('should return square of a number', () => {
+    expect(calculator.square(2)).to.equal(4);
+  });
+
+  it('should return square of negative ', () => {
+    expect(calculator.square(-2)).to.equal(4);
+  });
+});
