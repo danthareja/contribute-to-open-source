@@ -46,4 +46,3 @@ exports.divide = (x, y) => {
 };
 
 module.exports = exports;
-/* Nothing is changed just added a comment .1 here*/

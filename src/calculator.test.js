@@ -135,4 +135,3 @@ describe('divide', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
 });
-/* Nothing is changed just added a comment .2 here*/
