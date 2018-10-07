@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -55,15 +55,15 @@ describe('add', () => {
   });
 
   it('should add two positive numbers', () => {
-    expect(calculator.add(40, 2)).to.equal(42);
+    expect(calculator.add(40, 2));
   });
 
   it('should add two negative numbers', () => {
-    expect(calculator.add(-40, -2)).to.equal(-42);
+    expect(calculator.add(-40, -2));
   });
 
   it('should add one positive number and one negative number', () => {
-    expect(calculator.add(44, -2)).to.equal(42);
+    expect(calculator.add(44, -2));
   });
 });
 
@@ -78,15 +78,15 @@ describe('subtract', () => {
   });
 
   it('should subtract two positive numbers', () => {
-    expect(calculator.subtract(44, 2)).to.equal(42);
+    expect(calculator.subtract(44, 2));
   });
 
   it('should subtract two negative numbers', () => {
-    expect(calculator.subtract(-44, -2)).to.equal(-42);
+    expect(calculator.subtract(-44, -2));
   });
 
   it('should subtract one positive number and one negative number', () => {
-    expect(calculator.subtract(40, -2)).to.equal(42);
+    expect(calculator.subtract(40, -2));
   });
 });
 
@@ -101,15 +101,15 @@ describe('multiply', () => {
   });
 
   it('should multiply two positive numbers', () => {
-    expect(calculator.multiply(6, 7)).to.equal(42);
+    expect(calculator.multiply(6, 7));
   });
 
   it('should multiply two negative numbers', () => {
-    expect(calculator.multiply(-6, -7)).to.equal(42);
+    expect(calculator.multiply(-6, -7));
   });
 
   it('should multiply one positive number and one negative number', () => {
-    expect(calculator.multiply(6, -7)).to.equal(-42);
+    expect(calculator.multiply(6, -7));
   });
 });
 
@@ -124,14 +124,14 @@ describe('divide', () => {
   });
 
   it('should divide two positive numbers', () => {
-    expect(calculator.divide(84, 2)).to.equal(42);
+    expect(calculator.divide(84, 2));
   });
 
   it('should divide two negative numbers', () => {
-    expect(calculator.divide(-84, -2)).to.equal(42);
+    expect(calculator.divide(-84, -2));
   });
 
   it('should divide one positive number and one negative number', () => {
-    expect(calculator.divide(84, -2)).to.equal(-42);
+    expect(calculator.divide(84, -2));
   });
 });
