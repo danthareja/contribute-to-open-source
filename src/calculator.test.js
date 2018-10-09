@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
+// enable all checks
 describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
