@@ -27,4 +27,9 @@ exports.divide = (x, y) => {
   return x / y;
 };
 
+exports.square = (x) => {
+  exports._check(x, x);
+  return x * x;
+}
+
 module.exports = exports;
