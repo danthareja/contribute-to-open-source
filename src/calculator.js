@@ -32,4 +32,9 @@ exports.square = (x) => {
   return x * x;
 };
 
+exports.cube = (x) => {
+  exports._check(x, x);
+  return x * x * x;
+};
+
 module.exports = exports;

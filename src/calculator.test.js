@@ -155,3 +155,23 @@ describe('square', () => {
     expect(calculator.square(0)).to.equal(0);
   });
 });
+
+describe('cube', () => {
+  it('should throw a TypeError if argument is not a number', () => {
+    expect(() => calculator.cube('2')).to.throw(TypeError);
+    expect(() => calculator.cube([])).to.throw(TypeError);
+    expect(() => calculator.cube({})).to.throw(TypeError);
+  });
+
+  it('should cube positive numbers', () => {
+    expect(calculator.cube(4)).to.equal(64);
+  });
+
+  it('should cube negative numbers', () => {
+    expect(calculator.cube(-5)).to.equal(-125);
+  });
+
+  it('should cube zero', () => {
+    expect(calculator.cube(0)).to.equal(0);
+  });
+});
