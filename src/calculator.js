@@ -3,7 +3,7 @@ exports._check = (...args) => {
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
-  args.map((a) => {
+  args.forEach((a) => {
     if (typeof a !== 'number') {
       throw new TypeError(`${a} is not a number`);
     }
