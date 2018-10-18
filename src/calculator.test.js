@@ -141,7 +141,7 @@ describe('square', () => {
     expect(() => calculator.square('2')).to.throw(TypeError);
     expect(() => calculator.square([])).to.throw(TypeError);
     expect(() => calculator.square({})).to.throw(TypeError);
-  })
+  });
 
   it('should square positive numbers', () => {
     expect(calculator.square(4)).to.equal(16);
