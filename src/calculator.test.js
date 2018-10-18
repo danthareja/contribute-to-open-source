@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -133,5 +133,45 @@ describe('divide', () => {
 
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
+  });
+});
+
+describe('square', () => {
+  it('should throw a TypeError if argument is not a number', () => {
+    expect(() => calculator.square('2')).to.throw(TypeError);
+    expect(() => calculator.square([])).to.throw(TypeError);
+    expect(() => calculator.square({})).to.throw(TypeError);
+  });
+
+  it('should square positive numbers', () => {
+    expect(calculator.square(4)).to.equal(16);
+  });
+
+  it('should square negative numbers', () => {
+    expect(calculator.square(-5)).to.equal(25);
+  });
+
+  it('should square zero', () => {
+    expect(calculator.square(0)).to.equal(0);
+  });
+});
+
+describe('cube', () => {
+  it('should throw a TypeError if argument is not a number', () => {
+    expect(() => calculator.cube('2')).to.throw(TypeError);
+    expect(() => calculator.cube([])).to.throw(TypeError);
+    expect(() => calculator.cube({})).to.throw(TypeError);
+  });
+
+  it('should cube positive numbers', () => {
+    expect(calculator.cube(4)).to.equal(64);
+  });
+
+  it('should cube negative numbers', () => {
+    expect(calculator.cube(-5)).to.equal(-125);
+  });
+
+  it('should cube zero', () => {
+    expect(calculator.cube(0)).to.equal(0);
   });
 });
