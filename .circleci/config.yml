@@ -6,22 +6,6 @@ jobs:
       - image: circleci/node:6.10
     steps:
       - checkout
-      - run:
-          name: Validating PR
-          command: |
-            if [ -n "${CIRCLE_PR_NUMBER}" ]; then
-              curl https://api.github.com/repos/danthareja/contribute-to-open-source/pulls/$CIRCLE_PR_NUMBER > pull.json
-              node -e "
-                var pull = require('./pull.json');
-                if (pull.base.ref !== pull.user.login) {
-                  console.log('Invalid PR');
-                  process.exit(1);
-                }
-              "
-            else
-              echo "Not a PR build"
-              exit 1
-            fi
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
