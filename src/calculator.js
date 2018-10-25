@@ -3,9 +3,42 @@ exports._check = () => {
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator._check(40, '2')).to.throw(TypeError);
+    expect(() => calculator._check(40, [])).to.throw(TypeError);
+    expect(() => calculator._check(40, {})).to.throw(TypeError);
+    expect(() => calculator._check('40', 2)).to.throw(TypeError);
+    expect(() => calculator._check([], 2)).to.throw(TypeError);
+    expect(() => calculator._check({}, 2)).to.throw(TypeError);
+  });
+
+  it('should be called once in "add"', () => {
+    calculator.add(40, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(40, 2);
+  });
+
+  it('should be called once in "subtract"', () => {
+    calculator.subtract(44, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(44, 2);
+  });
+
+  it('should be called once in "multiply"', () => {
+    calculator.multiply(6, 7);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(6, 7);
+  });
+
+  it('should be called once in "divide"', () => {
+    calculator.divide(84, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(84, 2);
+  });
 };
 
 exports.add = (x, y) => {
+  exports._check();
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
@@ -16,6 +49,7 @@ exports.add = (x, y) => {
 };
 
 exports.subtract = (x, y) => {
+  exports._check();
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
@@ -26,6 +60,7 @@ exports.subtract = (x, y) => {
 };
 
 exports.multiply = (x, y) => {
+  exports._check();
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
@@ -36,6 +71,7 @@ exports.multiply = (x, y) => {
 };
 
 exports.divide = (x, y) => {
+  exports._check();
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
