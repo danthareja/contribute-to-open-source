@@ -1,3 +1,5 @@
+const calculator = require('./calculator');
+
 exports._check = () => {
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here

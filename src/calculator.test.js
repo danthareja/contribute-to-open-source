@@ -9,8 +9,6 @@ describe('_check', () => {
   afterEach(() => {
     calculator._check.restore();
   });
-
-  
 });
 
 describe('add', () => {
