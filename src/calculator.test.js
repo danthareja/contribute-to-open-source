@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe('_check', (x, y) => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
