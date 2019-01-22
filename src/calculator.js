@@ -1,3 +1,4 @@
+// This is my contribute
 exports._check = (x, y) => {
 	if (typeof x !== 'number') {
 		throw new TypeError('$(x) is not numer');
