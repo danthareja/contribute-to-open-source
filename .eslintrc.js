@@ -1,5 +1,6 @@
 module.exports = {
   "extends": "airbnb-base",
+  "extends": "eslint:recommended",
   "env": {
     "node":true,
     "mocha": true,
