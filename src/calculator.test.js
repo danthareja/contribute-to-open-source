@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe.skip('exports._check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -44,7 +44,7 @@ describe.skip('_check', () => {
   });
 });
 
-describe('add', () => {
+describe.only('add', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.add(40, '2')).to.throw(TypeError);
     expect(() => calculator.add(40, [])).to.throw(TypeError);
@@ -67,7 +67,7 @@ describe('add', () => {
   });
 });
 
-describe('subtract', () => {
+describe.only('subtract', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
     expect(() => calculator.subtract(40, [])).to.throw(TypeError);
@@ -90,7 +90,7 @@ describe('subtract', () => {
   });
 });
 
-describe('multiply', () => {
+describe.only('multiply', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
     expect(() => calculator.multiply(40, [])).to.throw(TypeError);
@@ -113,7 +113,7 @@ describe('multiply', () => {
   });
 });
 
-describe('divide', () => {
+describe.only('divide', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.divide(40, '2')).to.throw(TypeError);
     expect(() => calculator.divide(40, [])).to.throw(TypeError);
