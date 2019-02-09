@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('exports._check', () => {
+describe.skip('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
