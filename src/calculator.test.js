@@ -20,9 +20,9 @@ describe.skip('_check', () => {
   });
 
   it('should be called once in "add"', () => {
-    calculator.add(40, 2);
+    calculator.add(20, 1);
     expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(40, 2);
+    expect(calculator._check).to.have.been.calledWith(20, 1);
   });
 
   it('should be called once in "subtract"', () => {
