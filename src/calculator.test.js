@@ -122,7 +122,7 @@ describe('divide', () => {
     expect(() => calculator.divide([], 2)).to.throw(TypeError);
     expect(() => calculator.divide({}, 2)).to.throw(TypeError);
   });
-	
+
   it('should divide two positive numbers', () => {
     expect(calculator.divide(84, 2)).to.equal(42);
   });
