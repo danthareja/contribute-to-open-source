@@ -13,6 +13,7 @@ module.exports = {
     "import"
   ],
   "rules": {
-    "no-underscore-dangle": 0,
+      "no-underscore-dangle": 0,
+      "linebreak-style": [0,"error", "windows"],
   }
 };
