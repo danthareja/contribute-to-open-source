@@ -13,6 +13,6 @@ module.exports = {
     "import"
   ],
   "rules": {
-    "no-underscore-dangle": 0,
+    "no-underscore-dangle": 0
   }
 };
