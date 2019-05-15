@@ -22,10 +22,10 @@
     "test": "mocha --require test/setup.js src/**/*.test.js"
   },
   "devDependencies": {
-    "chai": "^4.0.0",
+    "chai": "^4.2.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.17.2",
     "mocha": "^3.4.2",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0"
