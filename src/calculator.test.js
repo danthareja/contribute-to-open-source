@@ -56,6 +56,7 @@ describe('add', () => {
 
   it('should add two positive numbers', () => {
     expect(calculator.add(40, 2)).to.equal(42);
+    expect(calculator.add(10, 2)).to.equal(12);
   });
 
   it('should add two negative numbers', () => {
