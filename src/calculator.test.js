@@ -11,32 +11,24 @@ describe('_check', () => {
   });
 
   it('should throw a TypeError if arguments are not numbers', () => {
- ;
-    
+
+
   });
 
   it('should be called once in "add"', () => {
     calculator.add(40, 2);
- 
- 
   });
 
   it('should be called once in "subtract"', () => {
     calculator.subtract(44, 2);
-
-    
   });
 
   it('should be called once in "multiply"', () => {
     calculator.multiply(6, 7);
- 
-  
   });
 
   it('should be called once in "divide"', () => {
     calculator.divide(84, 2);
- 
-   
   });
 });
 
