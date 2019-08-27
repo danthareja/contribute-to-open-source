@@ -7,26 +7,23 @@ exports._check = (x, y) => {
   }
   return x + y;
 };
-  
+
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
-  // npm error on local machine fix later 
+  // npm error on local machine fix later
 
 exports.add = (x, y) => {
-  exports._check(x,y)
-}
+  exports._check(x, y);
+};
 exports.subtract = (x, y) => {
-  
-    exports._check(x, y)
-  }
+  exports._check(x, y);
+};
 exports.multiply = (x, y) => {
-
-    exports._check(x, y)
-  }
+  exports._check(x, y);
+};
 
 exports.divide = (x, y) => {
- 
-    exports._check(x, y)
-  }
+  exports._check(x, y);
+};
 module.exports = exports;
