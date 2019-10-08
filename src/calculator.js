@@ -1,4 +1,4 @@
-exports._check = () => {
+exports._check = (x, y) => {
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
@@ -14,22 +14,22 @@ exports._check = () => {
 };
 
 exports.add = (x, y) => {
-  this._check(x, y);
+  exports._check(x, y);
   return x + y;
 }
 
 exports.subtract = (x, y) => {
-  this._check(x, y);
+  exports._check(x, y);
   return x - y;
 };
 
 exports.multiply = (x, y) => {
-  this._check(x, y);
+  exports._check(x, y);
   return x * y;
 };
 
 exports.divide = (x, y) => {
-  this._check(x, y);
+  exports._check(x, y);
   return x / y;
 };
 
