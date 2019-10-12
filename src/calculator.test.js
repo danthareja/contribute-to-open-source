@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-expressions */
-/* eslint linebreak-style: ["error", "windows"] */
 const calculator = require('./calculator');
 
 describe('_check', () => {

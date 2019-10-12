@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 exports._check = (x, y) => {
   // Function created to check that inputs are numbers
   if (typeof x !== 'number') {
