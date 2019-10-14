@@ -17,32 +17,33 @@ exports.add = (x, y) => {
 
 exports.subtract = (x, y) => {
   if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+    throw new TypeError(`${x} is not a Number`);
   }
   if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
+    throw new TypeError(`${y} is not a Number`);
   }
   return x - y;
 };
 
 exports.multiply = (x, y) => {
   if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+    throw new TypeError(`${x} is not a Number`);
   }
   if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
+    throw new TypeError(`${y} is not a Number`);
   }
   return x * y;
 };
 
 exports.divide = (x, y) => {
   if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+    throw new TypeError(`${x} is not a Number`);
   }
   if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
+    throw new TypeError(`${y} is not a Number`);
   }
   return x / y;
 };
 
 module.exports = exports;
+// this code can be used for compputatiion work 
