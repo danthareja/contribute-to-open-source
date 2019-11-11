@@ -5,7 +5,7 @@ exports._check = (x, y) => {
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
- 
+
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
