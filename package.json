@@ -22,12 +22,22 @@
     "test": "mocha --require test/setup.js src/**/*.test.js"
   },
   "devDependencies": {
-    "chai": "^4.0.0",
+    "ajv": "^6.10.2",
+    "chai": "^4.2.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^3.4.2",
+    "lint": "^0.7.0",
+    "mocha": "^7.0.0",
     "sinon": "^2.3.2",
-    "sinon-chai": "^2.10.0"
+    "sinon-chai": "^2.10.0",
+    "webpack": "^4.41.5"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/runtime": "^7.8.0",
+    "airbnb-browser-shims": "^3.3.0",
+    "babel": "^6.23.0",
+    "babel-preset-airbnb": "^4.4.0"
   }
 }
