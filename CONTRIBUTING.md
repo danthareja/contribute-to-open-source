@@ -20,7 +20,9 @@ To help you get your feet wet and get you familiar with our contribution process
 
 We follow [Airbnb's Style Guide](https://github.com/airbnb/javascript).
 
-Our linter will catch most styling issues that may exist in your code. You can check the status of your code styling by simply running `npm run lint` after building the project locally. We will not accept contributions with linting errors.
+Our linter will catch most styling issues that may exist in your code. You can check the status of your code styling by simply running `npm run lint` after building the project locally.
+
+**We will not accept contributions with linting errors.**
 
 ## Build the project locally
 
