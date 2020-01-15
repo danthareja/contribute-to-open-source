@@ -147,9 +147,11 @@ $ git push origin master
 1. Find the [New Pull Request](https://github.com/danthareja/contribute-to-open-source/compare/) button
 2. Select the option to **compare across forks**
 3. Select **your username** in the `head fork` option
-4. Select **your username** in the `base` option
+4. Select **your username** in the `base` option<sup>*</sup>
 ![pr](https://user-images.githubusercontent.com/6980359/32564814-90b55e68-c472-11e7-8901-ae03d8151cb0.png)
 4. Click **Create Pull Request**
+
+###### <sup>*</sup> This is a weird requirement. In the real-world, most projects will expect you to open a Pull Request against the `master` base branch. Can you guess why it's needed here?
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT license.
