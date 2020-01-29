@@ -13,53 +13,21 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  // KGOLTZ removed duplicate error checking
-  //if (typeof x !== 'number') {
-    //throw new TypeError(`${x} is not a number`);
-  //}
-  //if (typeof y !== 'number') {
-    //throw new TypeError(`${y} is not a number`);
-  //}
-  // KGOLTZ call error checking function
   exports._check(x, y);
   return x + y;
 };
 
 exports.subtract = (x, y) => {
-  // KGOLTZ removed duplicate error checking
-  //if (typeof x !== 'number') {
-    //throw new TypeError(`${x} is not a number`);
-  //}
-  //if (typeof y !== 'number') {
-    //throw new TypeError(`${y} is not a number`);
-  //}
-  // KGOLTZ call error checking function
   exports._check(x, y);
   return x - y;
 };
 
 exports.multiply = (x, y) => {
-  // KGOLTZ removed duplicate error checking
-  //if (typeof x !== 'number') {
-    //throw new TypeError(`${x} is not a number`);
-  //}
-  //if (typeof y !== 'number') {
-    //throw new TypeError(`${y} is not a number`);
-  //}
-  // KGOLTZ call error checking function
   exports._check(x, y);
   return x * y;
 };
 
 exports.divide = (x, y) => {
-  // KGOLTZ removed duplicate error checking
-  //if (typeof x !== 'number') {
-    //throw new TypeError(`${x} is not a number`);
-  //}
-  //if (typeof y !== 'number') {
-    //throw new TypeError(`${y} is not a number`);
-  //}
-  // KGOLTZ call error checking function
   exports._check(x, y);
   return x / y;
 };
