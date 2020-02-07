@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-expressions */
+src/calculator.js/* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe.only('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -52,6 +52,7 @@ describe('add', () => {
     expect(() => calculator.add('40', 2)).to.throw(TypeError);
     expect(() => calculator.add([], 2)).to.throw(TypeError);
     expect(() => calculator.add({}, 2)).to.throw(TypeError);
+	calculator._check(40,2);
   });
 
   it('should add two positive numbers', () => {
@@ -75,6 +76,7 @@ describe('subtract', () => {
     expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
     expect(() => calculator.subtract([], 2)).to.throw(TypeError);
     expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
+	calculator._check(44,2);
   });
 
   it('should subtract two positive numbers', () => {
@@ -98,6 +100,7 @@ describe('multiply', () => {
     expect(() => calculator.multiply('40', 2)).to.throw(TypeError);
     expect(() => calculator.multiply([], 2)).to.throw(TypeError);
     expect(() => calculator.multiply({}, 2)).to.throw(TypeError);
+	calculator._check(6, 7);
   });
 
   it('should multiply two positive numbers', () => {
@@ -121,6 +124,7 @@ describe('divide', () => {
     expect(() => calculator.divide('40', 2)).to.throw(TypeError);
     expect(() => calculator.divide([], 2)).to.throw(TypeError);
     expect(() => calculator.divide({}, 2)).to.throw(TypeError);
+	calculator._check(84, 2);
   });
 
   it('should divide two positive numbers', () => {
