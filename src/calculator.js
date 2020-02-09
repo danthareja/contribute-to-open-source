@@ -13,22 +13,22 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  
+  calculator._check(x, y);
   return x + y;
 };
 
 exports.subtract = (x, y) => {
- 
+  calculator._check(x, y);
   return x - y;
 };
 
 exports.multiply = (x, y) => {
- 
+  calculator._check(x, y);
   return x * y;
 };
 
 exports.divide = (x, y) => {
- 
+  calculator._check(x, y);
   return x / y;
 };
 
