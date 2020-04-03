@@ -1,9 +1,8 @@
 exports._check = (...args) => {
-
-  args.map(x => {
-    if(typeof x !== 'number') throw new TypeError(`${x} is not a number`);
+  args.map((x) => {
+    if (typeof x !== 'number') throw new TypeError(`${x} is not a number`);
+    return null;
   });
-  
 };
 
 exports.add = (x, y) => {
