@@ -20,7 +20,9 @@ To help you get your feet wet and get you familiar with our contribution process
 
 We follow [Airbnb's Style Guide](https://github.com/airbnb/javascript).
 
-Our linter will catch most styling issues that may exist in your code. You can check the status of your code styling by simply running `npm run lint` after building the project locally. We will not accept contributions with linting errors.
+Our linter will catch most styling issues that may exist in your code. You can check the status of your code styling by simply running `npm run lint` after building the project locally.
+
+**We will not accept contributions with linting errors.**
 
 ## Build the project locally
 
@@ -100,7 +102,7 @@ $ npm test -- --watch
 
 ## Submit a Pull Request
 
-Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue the in the main project, you *want* to change to the original code. A *pull request* is a GitHub feature that lets you do just that!
+Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue in the main project, you *want* to change the original code. A *pull request* is a GitHub feature that lets you do just that!
 
 There are three steps to submitting a pull request:
 1. [Save your changes locally](#save-your-changes-locally)
@@ -147,9 +149,11 @@ $ git push origin master
 1. Find the [New Pull Request](https://github.com/danthareja/contribute-to-open-source/compare/) button
 2. Select the option to **compare across forks**
 3. Select **your username** in the `head fork` option
-4. Select **your username** in the `base` option
+4. Select **your username** in the `base` option<sup>*</sup>
 ![pr](https://user-images.githubusercontent.com/6980359/32564814-90b55e68-c472-11e7-8901-ae03d8151cb0.png)
 4. Click **Create Pull Request**
+
+###### <sup>*</sup> This is a weird requirement. In the real-world, most projects will expect you to open a Pull Request against the `master` base branch. Can you guess why it's needed here?
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT license.
