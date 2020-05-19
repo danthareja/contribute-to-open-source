@@ -68,7 +68,7 @@ describe('add', () => {
 
   it('should add a number and a floating point number', () => {
     expect(calculator.add(40, 2.0)).to.equal(42);
-  })
+  });
 });
 
 describe('subtract', () => {
