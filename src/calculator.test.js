@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -84,6 +84,7 @@ describe('subtract', () => {
   it('should subtract two negative numbers', () => {
     expect(calculator.subtract(-44, -2)).to.equal(-42);
   });
+  
 
   it('should subtract one positive number and one negative number', () => {
     expect(calculator.subtract(40, -2)).to.equal(42);
