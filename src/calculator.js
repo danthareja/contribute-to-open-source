@@ -1,3 +1,4 @@
+// edited by @radiasl for "contribute-to-open-source"
 exports._check = () => {
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
