@@ -1,4 +1,4 @@
-exports._check = (x,y) => {
+exports._check = (x, y) => {
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
@@ -31,7 +31,7 @@ exports.multiply = (x, y) => {
 
 exports.divide = (x, y) => {
   exports._check(x, y);
-  
+
   return x / y;
 };
 
