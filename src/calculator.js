@@ -4,11 +4,11 @@ exports._check = (x, y) => {
   }
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
-  }  
+  }
 };
 
 exports.add = (x, y) => {
-  exports._check(x, y);  
+  exports._check(x, y);
   return x + y;
 };
 
