@@ -27,6 +27,7 @@ exports.multiply = (x, y) => {
   return x * y;
 };
 
+
 exports.divide = (x, y) => {
   exports._check(x, y);
   return x / y;
