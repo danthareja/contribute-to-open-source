@@ -8,7 +8,6 @@ exports._check = (...args) => {
       throw new TypeError(`${element} is not a number`);
     }
   });
-
 };
 
 
