@@ -1,5 +1,5 @@
-exports._check = (x,y) => {
-  if (typeof x !== 'number' || typeof y !== 'number' ) {
+exports._check = (x, y) => {
+  if (typeof x !== 'number' || typeof y !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
 };
