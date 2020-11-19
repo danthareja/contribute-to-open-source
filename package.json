@@ -26,7 +26,7 @@
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^3.4.2",
+    "mocha": "^8.2.1",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0"
   }
