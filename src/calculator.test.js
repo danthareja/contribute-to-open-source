@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-expressions */
+// Não localizei o erro //
 const calculator = require('./calculator');
 
 describe.skip('_check', () => {
@@ -44,7 +45,7 @@ describe.skip('_check', () => {
   });
 });
 
-describe('add', () => {
+describe('add', (x, y) => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.add(40, '2')).to.throw(TypeError);
     expect(() => calculator.add(40, [])).to.throw(TypeError);
