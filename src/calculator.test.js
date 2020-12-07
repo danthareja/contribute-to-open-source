@@ -8,6 +8,7 @@ describe.skip('_check', () => {
 
   afterEach(() => {
     calculator._check.restore();
+	
   });
 
   it('should throw a TypeError if arguments are not numbers', () => {
