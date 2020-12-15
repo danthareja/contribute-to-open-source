@@ -29,5 +29,8 @@
     "mocha": "^3.4.2",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0"
+  },
+  "dependencies": {
+    "npm": "^6.14.9"
   }
 }
