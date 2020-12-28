@@ -14,5 +14,6 @@ module.exports = {
   ],
   "rules": {
     "no-underscore-dangle": 0,
+    "eol-last": 0,
   }
 };
