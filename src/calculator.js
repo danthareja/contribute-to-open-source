@@ -3,6 +3,38 @@ exports._check = () => {
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => exports._check(40, '2')).to.throw(TypeError);
+    expect(() => exports._check(40, [])).to.throw(TypeError);
+    expect(() => exports._check(40, {})).to.throw(TypeError);
+    expect(() => exports._check('40', 2)).to.throw(TypeError);
+    expect(() => exports._check([], 2)).to.throw(TypeError);
+    expect(() => exports._check({}, 2)).to.throw(TypeError);
+  });
+
+  it('should be called once in "add"', () => {
+    exports.add(40, 2);
+    expect(exports._check).to.have.been.calledOnce();
+    expect(exports._check).to.have.been.calledWith(40, 2);
+  });
+
+  it('should be called once in "subtract"', () => {
+    exports.subtract(44, 2);
+    expect(exports._check).to.have.been.calledOnce();
+    expect(exports._check).to.have.been.calledWith(44, 2);
+  });
+
+  it('should be called once in "multiply"', () => {
+    exports.multiply(6, 7);
+    expect(exports._check).to.have.been.calledOnce();
+    expect(exports._check).to.have.been.calledWith(6, 7);
+  });
+
+  it('should be called once in "divide"', () => {
+    exports.divide(84, 2);
+    expect(exports._check).to.have.been.calledOnce();
+    expect(exports._check).to.have.been.calledWith(84, 2);
+  });
 };
 
 exports.add = (x, y) => {
