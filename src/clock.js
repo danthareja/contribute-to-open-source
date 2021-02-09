@@ -1,31 +1,22 @@
-// Following is the javascript code for creating a clock.
-//You can use your own HTML template and attach this javascript file to it.
-
-setInterval(showTime, 1000); 
-function showTime() { 
-    let time = new Date(); 
-    let hour = time.getHours(); 
-    let min = time.getMinutes(); 
-    let sec = time.getSeconds(); 
-    am_pm = "AM"; 
+let clock = () => {
+    let date = new Date();
+    let hrs = date.getHours();
+    let mins = date.getMinutes();
+    let secs = date.getSeconds();
+    let period = "AM";
+    if (hrs == 0) {
+      hrs = 12;
+    } else if (hrs >= 12) {
+      hrs = hrs - 12;
+      period = "PM";
+    }
+    hrs = hrs < 10 ? "0" + hrs : hrs;
+    mins = mins < 10 ? "0" + mins : mins;
+    secs = secs < 10 ? "0" + secs : secs;
   
-    if (hour > 12) { 
-        hour -= 12; 
-        am_pm = "PM"; 
-    } 
-    if (hour == 0) { 
-        hr = 12; 
-        am_pm = "AM"; 
-    } 
+    let time = `${hrs}:${mins}:${secs}:${period}`;
+    document.getElementById("clock").innerText = time;
+    setTimeout(clock, 1000);
+  };
   
-    hour = hour < 10 ? "0" + hour : hour; 
-    min = min < 10 ? "0" + min : min; 
-    sec = sec < 10 ? "0" + sec : sec; 
-  
-    let currentTime = hour + ":" 
-            + min + ":" + sec + am_pm; 
-  
-    document.getElementById("clock") 
-            .innerHTML = currentTime; 
-} 
-showTime(); 
+  clock();
