@@ -8,7 +8,7 @@ describe('_check', () => {
 
   afterEach(() => {
     calculator._check.restore();
-  });
+  })
 
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator._check(40, '2')).to.throw(TypeError);
