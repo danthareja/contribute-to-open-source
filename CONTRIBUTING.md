@@ -99,6 +99,13 @@ Run an automate test suite *and* re-run the tests when a file changes
 ```
 $ npm test -- --watch
 ```
+---------------------------------------------
+If on your **Terminal** there are still pending tests , and you think your code should pass the tests.
+Make sure to delete **.skip** at this [line](https://github.com/Korak-997/contribute-to-open-source/blob/6f2314f7b61babb7f51f8f0225ea94d42fd4aa23/src/calculator.test.js#L4)
+
+**.skip** on tests will make the test not run ! 
+it is mostly used for cases when you do not want the test to run. In other words to comment out the test case .
+----------------------------------------------------------
 
 ## Submit a Pull Request
 
