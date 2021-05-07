@@ -4,7 +4,7 @@ exports._check = (x, y) => {
   }
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
-  }  
+  }
 };
 
 exports.add = (x, y) => {
