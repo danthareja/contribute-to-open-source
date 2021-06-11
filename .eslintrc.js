@@ -14,5 +14,6 @@ module.exports = {
   ],
   "rules": {
     "no-underscore-dangle": 0,
+    "linebreak-style": ["error", process.env.NODE_ENV === 'prod' ? "unix" : "windows"]
   }
 };
