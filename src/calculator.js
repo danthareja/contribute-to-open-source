@@ -5,7 +5,7 @@
   // HINT: you can invoke this function with exports._check()
 //};
 
-exports._check = () => {
+exports._check = (x,y) => {
   // check if x !== number
   if(typeof x !== 'number') {
     // throw error x NAN
