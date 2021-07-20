@@ -6,6 +6,7 @@ exports._check = () => {
 };
 
 //Testing
+//This feature
 
 exports.add = (x, y) => {
   if (typeof x !== 'number') {
