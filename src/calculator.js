@@ -5,6 +5,8 @@ exports._check = () => {
   // HINT: you can invoke this function with exports._check()
 };
 
+//Testing
+
 exports.add = (x, y) => {
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
@@ -46,3 +48,5 @@ exports.divide = (x, y) => {
 };
 
 module.exports = exports;
+
+
