@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -45,15 +45,6 @@ describe.skip('_check', () => {
 });
 
 describe('add', () => {
-  it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.add(40, '2')).to.throw(TypeError);
-    expect(() => calculator.add(40, [])).to.throw(TypeError);
-    expect(() => calculator.add(40, {})).to.throw(TypeError);
-    expect(() => calculator.add('40', 2)).to.throw(TypeError);
-    expect(() => calculator.add([], 2)).to.throw(TypeError);
-    expect(() => calculator.add({}, 2)).to.throw(TypeError);
-  });
-
   it('should add two positive numbers', () => {
     expect(calculator.add(40, 2)).to.equal(42);
   });
@@ -68,15 +59,6 @@ describe('add', () => {
 });
 
 describe('subtract', () => {
-  it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
-    expect(() => calculator.subtract(40, [])).to.throw(TypeError);
-    expect(() => calculator.subtract(40, {})).to.throw(TypeError);
-    expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
-    expect(() => calculator.subtract([], 2)).to.throw(TypeError);
-    expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
-  });
-
   it('should subtract two positive numbers', () => {
     expect(calculator.subtract(44, 2)).to.equal(42);
   });
@@ -91,15 +73,6 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
-  it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
-    expect(() => calculator.multiply(40, [])).to.throw(TypeError);
-    expect(() => calculator.multiply(40, {})).to.throw(TypeError);
-    expect(() => calculator.multiply('40', 2)).to.throw(TypeError);
-    expect(() => calculator.multiply([], 2)).to.throw(TypeError);
-    expect(() => calculator.multiply({}, 2)).to.throw(TypeError);
-  });
-
   it('should multiply two positive numbers', () => {
     expect(calculator.multiply(6, 7)).to.equal(42);
   });
@@ -114,15 +87,6 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
-  it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.divide(40, '2')).to.throw(TypeError);
-    expect(() => calculator.divide(40, [])).to.throw(TypeError);
-    expect(() => calculator.divide(40, {})).to.throw(TypeError);
-    expect(() => calculator.divide('40', 2)).to.throw(TypeError);
-    expect(() => calculator.divide([], 2)).to.throw(TypeError);
-    expect(() => calculator.divide({}, 2)).to.throw(TypeError);
-  });
-
   it('should divide two positive numbers', () => {
     expect(calculator.divide(84, 2)).to.equal(42);
   });
