@@ -5,6 +5,7 @@ exports._check = () => {
   // HINT: you can invoke this function with exports._check()
 };
 
+//This is a test
 exports.add = (x, y) => {
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
