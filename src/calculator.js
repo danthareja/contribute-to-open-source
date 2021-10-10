@@ -9,6 +9,7 @@ exports._check = (x, y) => {
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
+  return x + y;
 };
 
 exports.add = (x, y) => {
