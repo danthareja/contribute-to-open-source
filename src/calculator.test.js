@@ -30,7 +30,7 @@ describe("_check", () => {
     expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(44, 2);
   });
-
+ 
   it('should be called once in "multiply"', () => {
     calculator.multiply(6, 7);
     expect(calculator._check).to.have.been.calledOnce;
