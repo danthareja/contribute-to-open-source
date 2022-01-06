@@ -21,13 +21,13 @@ describe("_check", async () => {
   });
 
   it('should be called once in "add"', () => {
-    calculator.add(40, 2);
+    calculator.add(20, 4);
 
     expect(calculator._check).assert.calledOnce;
   });
 
   it('should be called once in "subtract"', () => {
-    calculator.subtract(44, 2);
+    calculator.subtract(11, 45);
     expect(calculator._check).assert.calledOnce;
   });
 
