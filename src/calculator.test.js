@@ -23,26 +23,22 @@ describe("_check", async () => {
   it('should be called once in "add"', () => {
     calculator.add(40, 2);
 
-    expect(calculator._check).to.have.been.called.Once;
-    expect(calculator._check).to.have.been.called.with(40, 2);
+    expect(calculator._check).assert.calledOnce;
   });
 
   it('should be called once in "subtract"', () => {
     calculator.subtract(44, 2);
     expect(calculator._check).assert.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(44, 2);
   });
 
   it('should be called once in "multiply"', () => {
     calculator.multiply(6, 7);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(6, 7);
+    expect(calculator._check).assert.calledOnce;
   });
 
   it('should be called once in "divide"', () => {
     calculator.divide(84, 2);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(84, 2);
+    expect(calculator._check).assert.calledOnce;
   });
 });
 
