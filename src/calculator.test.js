@@ -21,7 +21,7 @@ describe("_check", async () => {
   });
 
   it('should be called once in "add"', () => {
-    calculator.add(40, 2);
+    calculator.add(50, 10);
 
     expect(calculator._check).assert.calledOnce;
   });
