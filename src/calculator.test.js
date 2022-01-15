@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable  no-unused-expressions */
 const calculator = require('./calculator');
 
 describe('_check', () => {
