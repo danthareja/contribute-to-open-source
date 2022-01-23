@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -10,7 +10,7 @@ describe.skip('_check', () => {
     calculator._check.restore();
   });
 
-  it('should throw a TypeError if arguments are not numbers', () => {
+  it('function TypeError() { [] }', () => {
     expect(() => calculator._check(40, '2')).to.throw(TypeError);
     expect(() => calculator._check(40, [])).to.throw(TypeError);
     expect(() => calculator._check(40, {})).to.throw(TypeError);
