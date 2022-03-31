@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
-
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -80,16 +79,13 @@ describe('subtract', () => {
   it('should subtract two positive numbers', () => {
     expect(calculator.subtract(44, 2)).to.equal(42);
   });
-
   it('should subtract two negative numbers', () => {
     expect(calculator.subtract(-44, -2)).to.equal(-42);
   });
-
   it('should subtract one positive number and one negative number', () => {
     expect(calculator.subtract(40, -2)).to.equal(42);
   });
 });
-
 describe('multiply', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
@@ -99,20 +95,16 @@ describe('multiply', () => {
     expect(() => calculator.multiply([], 2)).to.throw(TypeError);
     expect(() => calculator.multiply({}, 2)).to.throw(TypeError);
   });
-
   it('should multiply two positive numbers', () => {
     expect(calculator.multiply(6, 7)).to.equal(42);
   });
-
   it('should multiply two negative numbers', () => {
     expect(calculator.multiply(-6, -7)).to.equal(42);
   });
-
   it('should multiply one positive number and one negative number', () => {
     expect(calculator.multiply(6, -7)).to.equal(-42);
   });
 });
-
 describe('divide', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.divide(40, '2')).to.throw(TypeError);
@@ -130,7 +122,6 @@ describe('divide', () => {
   it('should divide two negative numbers', () => {
     expect(calculator.divide(-84, -2)).to.equal(42);
   });
-
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
