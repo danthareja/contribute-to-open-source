@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-expressions */
-const calculator = require("./calculator");
+const calculator = require('./calculator');
 
-describe.only("_check", () => {
+describe.only('_check', () => {
   beforeEach(() => {
-    sinon.spy(calculator, "_check");
+    sinon.spy(calculator, '_check');
   });
 
   afterEach(() => {
     calculator._check.restore();
   });
 
-  it("should throw a TypeError if arguments are not numbers", () => {
-    expect(() => calculator._check(40, "2")).to.throw(TypeError);
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator._check(40, '2')).to.throw(TypeError);
     expect(() => calculator._check(40, [])).to.throw(TypeError);
     expect(() => calculator._check(40, {})).to.throw(TypeError);
-    expect(() => calculator._check("40", 2)).to.throw(TypeError);
+    expect(() => calculator._check('40', 2)).to.throw(TypeError);
     expect(() => calculator._check([], 2)).to.throw(TypeError);
     expect(() => calculator._check({}, 2)).to.throw(TypeError);
   });
@@ -44,48 +44,48 @@ describe.only("_check", () => {
   });
 });
 
-describe("add", () => {
-  it("should throw a TypeError if arguments are not numbers", () => {
-    expect(() => calculator.add(40, "2")).to.throw(TypeError);
+describe('add', () => {
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator.add(40, '2')).to.throw(TypeError);
     expect(() => calculator.add(40, [])).to.throw(TypeError);
     expect(() => calculator.add(40, {})).to.throw(TypeError);
-    expect(() => calculator.add("40", 2)).to.throw(TypeError);
+    expect(() => calculator.add('40', 2)).to.throw(TypeError);
     expect(() => calculator.add([], 2)).to.throw(TypeError);
     expect(() => calculator.add({}, 2)).to.throw(TypeError);
   });
 
-  it("should add two positive numbers", () => {
+  it('should add two positive numbers', () => {
     expect(calculator.add(40, 2)).to.equal(42);
   });
 
-  it("should add two negative numbers", () => {
+  it('should add two negative numbers', () => {
     expect(calculator.add(-40, -2)).to.equal(-42);
   });
 
-  it("should add one positive number and one negative number", () => {
+  it('should add one positive number and one negative number', () => {
     expect(calculator.add(44, -2)).to.equal(42);
   });
 });
 
-describe("subtract", () => {
-  it("should throw a TypeError if arguments are not numbers", () => {
-    expect(() => calculator.subtract(40, "2")).to.throw(TypeError);
+describe('subtract', () => {
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
     expect(() => calculator.subtract(40, [])).to.throw(TypeError);
     expect(() => calculator.subtract(40, {})).to.throw(TypeError);
-    expect(() => calculator.subtract("40", 2)).to.throw(TypeError);
+    expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
     expect(() => calculator.subtract([], 2)).to.throw(TypeError);
     expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
   });
 
-  it("should subtract two positive numbers", () => {
+  it('should subtract two positive numbers', () => {
     expect(calculator.subtract(44, 2)).to.equal(42);
   });
 
-  it("should subtract two negative numbers", () => {
+  it('should subtract two negative numbers', () => {
     expect(calculator.subtract(-44, -2)).to.equal(-42);
   });
 
-  it("should subtract one positive number and one negative number", () => {
+  it('should subtract one positive number and one negative number', () => {
     expect(calculator.subtract(40, -2)).to.equal(42);
   });
 });
