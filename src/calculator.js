@@ -6,13 +6,12 @@ exports._check = () => {
 };
 
 exports.add = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+  if (typeof x == 'number' && typeof y == 'number') {
+      return x+y;
   }
-  if (typeof y !== 'number') {
+  else{
     throw new TypeError(`${y} is not a number`);
   }
-  return x + y;
 };
 
 exports.subtract = (x, y) => {
