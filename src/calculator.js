@@ -1,4 +1,4 @@
-exports._check = (x,y) => {
+exports._check = (x, y) => {
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
   if (typeof x !== 'number') {
