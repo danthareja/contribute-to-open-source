@@ -95,7 +95,7 @@ Run an automated test suite
 $ npm test
 ```
 
-Run an automate test suite *and* re-run the tests when a file changes
+Run an automated test suite *and* re-run the tests when a file changes
 ```
 $ npm test -- --watch
 ```
@@ -156,4 +156,4 @@ $ git push origin master
 ###### <sup>*</sup> This is a weird requirement. In the real-world, most projects will expect you to open a Pull Request against the `master` base branch. Can you guess why it's needed here?
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT license.
+By contributing, you agree that your contributions will be licensed under the MIT license.
