@@ -44,7 +44,7 @@ Once you get the project built, see if you can fix some [issues](https://github.
 
 All GitHub projects are backed by a version control software called *Git*. You'll need to [set up Git](https://github.com/danthareja/contribute-to-open-source/wiki/Setting-up-Git) in order to contribute to *any* project on GitHub.
 
-This specific project is written in JavaScript and uses Node.js as it's runtime. You'll need to [install Node.js](https://nodejs.org/en/) in order to run the project.
+This specific project is written in JavaScript and uses Node.js as its runtime. You'll need to [install Node.js](https://nodejs.org/en/) in order to run the project.
 
 ### Fork the repository
 
