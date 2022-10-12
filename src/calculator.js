@@ -1,5 +1,5 @@
 exports._check = (x, y) => {
-  let num = 'number';
+  const num = 'number';
   if (typeof x !== num) throw new TypeError(`${x} is not a ${num}`);
   if (typeof y !== num) throw new TypeError(`${y} is not a ${num}`);
 };
