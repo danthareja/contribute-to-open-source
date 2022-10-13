@@ -9,27 +9,35 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  if (this._check(x, y)) {   
+  if (this._check(x, y)) {
     return x + y;
+  } else {
+    return
   }
 };
-  
+
 
 exports.subtract = (x, y) => {
-  if (this._check(x, y)) {   
+  if (this._check(x, y)) {
     return x - y;
+  } else {
+    return
   }
 };
 
 exports.multiply = (x, y) => {
-  if (this._check(x, y)) {   
+  if (this._check(x, y)) {
     return x * y;
+  } else {
+    return
   }
 };
 
 exports.divide = (x, y) => {
-  if (this._check(x, y)) {   
+  if (this._check(x, y)) {
     return x / y;
+  } else {
+    return
   }
 };
 
