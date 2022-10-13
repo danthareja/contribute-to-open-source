@@ -9,36 +9,24 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  if (this._check(x, y)) {
-    return x + y;
-  } else {
-    return
-  }
+  exports._check(x, y);
+  return x + y;
 };
 
 
 exports.subtract = (x, y) => {
-  if (this._check(x, y)) {
-    return x - y;
-  } else {
-    return
-  }
+  exports._check(x, y);
+  return x - y;
 };
 
 exports.multiply = (x, y) => {
-  if (this._check(x, y)) {
-    return x * y;
-  } else {
-    return
-  }
+  exports._check(x, y);
+  return x * y;
 };
 
 exports.divide = (x, y) => {
-  if (this._check(x, y)) {
-    return x / y;
-  } else {
-    return
-  }
+  exports._check(x, y);
+  return x / y;
 };
 
 module.exports = exports;
