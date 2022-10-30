@@ -40,7 +40,7 @@ exports.divide = (x, y) => {
     throw new TypeError(`${x} is not a number`);
   }
   if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
+    throw new TypeError(`${y} is not a  number`);
   }
   return x / y;
 };
