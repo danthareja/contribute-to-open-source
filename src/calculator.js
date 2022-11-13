@@ -17,7 +17,7 @@ exports.subtract = (x, y) => {
   return x - y;
 };
 
-exports.multiply = (x, y) => {          
+exports.multiply = (x, y) => {
   exports._check(x, y);
   return x * y;
 };
