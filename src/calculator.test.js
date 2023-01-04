@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-expressions */
 exports._check = (x, y) => {
-  if (typeof x !== "number") {
+  if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
-  if (typeof y !== "number") {
+  if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
   return x + y;
