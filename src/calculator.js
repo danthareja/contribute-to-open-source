@@ -1,15 +1,16 @@
 const checkNumber = (x, y) => {
-  if (typeof x !== "number") {
+  if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
-  if (typeof y !== "number") {
+  if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
+
 };
 
 const checkDivideByZero = (y) => {
   if (y === 0) {
-    throw new Error("Cannot divide by zero");
+    throw new Error('Cannot divide by zero');
   }
 };
 
