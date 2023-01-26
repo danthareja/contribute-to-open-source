@@ -1,4 +1,4 @@
-exports._check = () => {
+exports._check = (x, y) => {
   if (typeof x !== "number") {
     throw new TypeError(`${x} is not a number`);
   }
