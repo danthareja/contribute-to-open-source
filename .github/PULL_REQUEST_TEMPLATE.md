@@ -8,7 +8,6 @@ Before submitting your changes for review, consider the message you write here c
 * Provide screenshots of before/after
 * Review the contributing guidelines for any other specifics
 -->
-first issue dry up the code
-Removed duplicate checks in the calculator and created a function that could be ran for each equation
-to speed up calculator
+
+**Delete me and write your Pull Request message here!**
 
