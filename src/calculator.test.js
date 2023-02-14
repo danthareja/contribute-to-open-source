@@ -1,13 +1,17 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
+const sinon = require('sinon');
+const { expect } = require('chai');
 
-describe.skip('_check', () => {
+describe('_check', () => {
+  let calculatorCheckSpy;
+
   beforeEach(() => {
-    sinon.spy(calculator, '_check');
+    calculatorCheckSpy = sinon.spy(calculator, '_check');
   });
 
   afterEach(() => {
-    calculator._check.restore();
+    calculatorCheckSpy.restore();
   });
 
   it('should throw a TypeError if arguments are not numbers', () => {
@@ -21,26 +25,26 @@ describe.skip('_check', () => {
 
   it('should be called once in "add"', () => {
     calculator.add(40, 2);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(40, 2);
+    expect(calculatorCheckSpy.calledOnce).to.be.true;
+    expect(calculatorCheckSpy.calledWith(40, 2)).to.be.true;
   });
 
   it('should be called once in "subtract"', () => {
     calculator.subtract(44, 2);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(44, 2);
+    expect(calculatorCheckSpy.calledOnce).to.be.true;
+    expect(calculatorCheckSpy.calledWith(44, 2)).to.be.true;
   });
 
   it('should be called once in "multiply"', () => {
     calculator.multiply(6, 7);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(6, 7);
+    expect(calculatorCheckSpy.calledOnce).to.be.true;
+    expect(calculatorCheckSpy.calledWith(6, 7)).to.be.true;
   });
 
   it('should be called once in "divide"', () => {
     calculator.divide(84, 2);
-    expect(calculator._check).to.have.been.calledOnce;
-    expect(calculator._check).to.have.been.calledWith(84, 2);
+    expect(calculatorCheckSpy.calledOnce).to.be.true;
+    expect(calculatorCheckSpy.calledWith(84, 2)).to.be.true;
   });
 });
 
@@ -121,6 +125,10 @@ describe('divide', () => {
     expect(() => calculator.divide('40', 2)).to.throw(TypeError);
     expect(() => calculator.divide([], 2)).to.throw(TypeError);
     expect(() => calculator.divide({}, 2)).to.throw(TypeError);
+  });
+
+  it('should throw a RangeError if the second argument is zero', () => {
+    expect(() => calculator.divide(42, 0)).to.throw(RangeError);
   });
 
   it('should divide two positive numbers', () => {
