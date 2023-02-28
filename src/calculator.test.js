@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
+
 describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
@@ -10,16 +11,16 @@ describe('_check', () => {
     calculator._check.restore();
   });
 
-  it(calculator._check, () => {
-    expect(() => calculator._check(40, 2)).to.throw(TypeError);
-    expect(() => calculator._check(40, 6)).to.throw(TypeError);
-    expect(() => calculator._check(40, 8)).to.throw(TypeError);
-    expect(() => calculator._check(40, 2)).to.throw(TypeError);
-    expect(() => calculator._check(1, 2)).to.throw(TypeError);
-    expect(() => calculator._check(5, 2)).to.throw(TypeError);
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator._check(40, '2')).to.throw(TypeError);
+    expect(() => calculator._check(40, [])).to.throw(TypeError);
+    expect(() => calculator._check(40, {})).to.throw(TypeError);
+    expect(() => calculator._check('40', 2)).to.throw(TypeError);
+    expect(() => calculator._check([], 2)).to.throw(TypeError);
+    expect(() => calculator._check({}, 2)).to.throw(TypeError);
   });
 
-  it(calculator._check, () => {
+  it('should be called once in "add"', () => {
     calculator.add(40, 2);
     expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(40, 2);
