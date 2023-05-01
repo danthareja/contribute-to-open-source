@@ -1,4 +1,4 @@
-exports._check = (x,y) => {
+exports._check = (x, y) => {
   if (typeof x !== 'number') {
     return false;
   }
@@ -9,28 +9,28 @@ exports._check = (x,y) => {
 };
 
 exports.add = (x, y) => {
-  if (this._check(x,y)) {
+  if (this._check(x, y)) {
     return x + y;
   }
   throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.subtract = (x, y) => {
-  if (this._check(x,y)) {
+  if (this._check(x, y)) {
     return x - y;
   }
   throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.multiply = (x, y) => {
-  if (this._check(x,y)) {
+  if (this._check(x, y)) {
     return x * y;
   }
   throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.divide = (x, y) => {
-  if (this._check(x,y)) {
+  if (this._check(x, y)) {
     return x / y;
   }
   throw new TypeError(`${x} or ${y} is not a number`);
