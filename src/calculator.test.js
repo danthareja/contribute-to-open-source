@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -10,13 +10,40 @@ describe.skip('_check', () => {
     calculator._check.restore();
   });
 
-  it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator._check(40, '2')).to.throw(TypeError);
-    expect(() => calculator._check(40, [])).to.throw(TypeError);
-    expect(() => calculator._check(40, {})).to.throw(TypeError);
-    expect(() => calculator._check('40', 2)).to.throw(TypeError);
-    expect(() => calculator._check([], 2)).to.throw(TypeError);
-    expect(() => calculator._check({}, 2)).to.throw(TypeError);
+  it('should throw a TypeError if arguments are not numbers in add function', () => {
+    expect(() => calculator.add(40, '2')).to.throw(TypeError);
+    expect(() => calculator.add(40, [])).to.throw(TypeError);
+    expect(() => calculator.add(40, {})).to.throw(TypeError);
+    expect(() => calculator.add('40', 2)).to.throw(TypeError);
+    expect(() => calculator.add([], 2)).to.throw(TypeError);
+    expect(() => calculator.add({}, 2)).to.throw(TypeError);
+  });
+
+  it('should throw a TypeError if arguments are not numbers in subtract function', () => {
+    expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
+    expect(() => calculator.subtract(40, [])).to.throw(TypeError);
+    expect(() => calculator.subtract(40, {})).to.throw(TypeError);
+    expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
+    expect(() => calculator.subtract([], 2)).to.throw(TypeError);
+    expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
+  });
+
+  it('should throw a TypeError if arguments are not numbers in multiply function', () => {
+    expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
+    expect(() => calculator.multiply(40, [])).to.throw(TypeError);
+    expect(() => calculator.multiply(40, {})).to.throw(TypeError);
+    expect(() => calculator.multiply('40', 2)).to.throw(TypeError);
+    expect(() => calculator.multiply([], 2)).to.throw(TypeError);
+    expect(() => calculator.multiply({}, 2)).to.throw(TypeError);
+  });
+
+  it('should throw a TypeError if arguments are not numbers in divide function', () => {
+    expect(() => calculator.divide(40, '2')).to.throw(TypeError);
+    expect(() => calculator.divide(40, [])).to.throw(TypeError);
+    expect(() => calculator.divide(40, {})).to.throw(TypeError);
+    expect(() => calculator.divide('40', 2)).to.throw(TypeError);
+    expect(() => calculator.divide([], 2)).to.throw(TypeError);
+    expect(() => calculator.divide({}, 2)).to.throw(TypeError);
   });
 
   it('should be called once in "add"', () => {

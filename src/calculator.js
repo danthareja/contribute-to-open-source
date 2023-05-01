@@ -1,48 +1,39 @@
-exports._check = () => {
-  // DRY up the codebase with this function
-  // First, move the duplicate error checking code here
-  // Then, invoke this function inside each of the others
-  // HINT: you can invoke this function with exports._check()
+exports._check = (x, y) => {
+  if (typeof x !== 'number') {
+    return false;
+  }
+  if (typeof y !== 'number') {
+    return false;
+  }
+  return true;
 };
 
 exports.add = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+  if (this._check(x, y)) {
+    return x + y;
   }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
-  return x + y;
+  throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.subtract = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+  if (this._check(x, y)) {
+    return x - y;
   }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
-  return x - y;
+  throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.multiply = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+  if (this._check(x, y)) {
+    return x * y;
   }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
-  return x * y;
+  throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 exports.divide = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
+  if (this._check(x, y)) {
+    return x / y;
   }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
-  return x / y;
+  throw new TypeError(`${x} or ${y} is not a number`);
 };
 
 module.exports = exports;
