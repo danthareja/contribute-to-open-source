@@ -16,7 +16,7 @@ describe('_check', () => {
     expect(() => calculator.add(40, {})).to.throw(TypeError);
     expect(() => calculator.add('40', 2)).to.throw(TypeError);
     expect(() => calculator.add([], 2)).to.throw(TypeError);
-    expect(() => calculator.add({}, 2)).to.throw(TypeError); 
+    expect(() => calculator.add({}, 2)).to.throw(TypeError);
   });
 
   it('should throw a TypeError if arguments are not numbers in subtract function', () => {
