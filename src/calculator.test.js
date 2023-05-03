@@ -4,7 +4,7 @@ const calculator = require('./calculator');
 describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
-  })
+  });
 
   afterEach(() => {
     calculator._check.restore();
