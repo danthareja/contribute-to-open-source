@@ -1,6 +1,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-# Contribute to Open Source
+# Contribute to Open Source.
 
 The goal of this project is to empower you to contribute code to open source projects on GitHub by teaching you the mechanics of the process in an interactive experience.
 
