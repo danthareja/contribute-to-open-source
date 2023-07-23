@@ -2,33 +2,33 @@
 const calculator = require('./calculator');
 
 describe('_check', () => {
-    beforeEach(() => {
-        sinon.spy(calculator, '_check');
+  beforeEach(() => {
+    sinon.spy(calculator, '_check');
     });
 
-    afterEach(() => {
+  afterEach(() => {
         calculator._check.restore();
     });
 
-    it('should throw a TypeError if arguments are not numbers', () => {
-        expect(() => calculator._check(40, '2')).to.throw(TypeError);
-        expect(() => calculator._check(40, [])).to.throw(TypeError);
-        expect(() => calculator._check(40, {})).to.throw(TypeError);
-        expect(() => calculator._check('40', 2)).to.throw(TypeError);
-        expect(() => calculator._check([], 2)).to.throw(TypeError);
-        expect(() => calculator._check({}, 2)).to.throw(TypeError);
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator._check(40, '2')).to.throw(TypeError);
+    expect(() => calculator._check(40, [])).to.throw(TypeError);
+    expect(() => calculator._check(40, {})).to.throw(TypeError);
+    expect(() => calculator._check('40', 2)).to.throw(TypeError);
+    expect(() => calculator._check([], 2)).to.throw(TypeError);
+    expect(() => calculator._check({}, 2)).to.throw(TypeError);
     });
 
-    it('should be called once in "add"', () => {
-        calculator.add(40, 2);
-        expect(calculator._check).to.have.been.calledOnce;
-        expect(calculator._check).to.have.been.calledWith(40, 2);
+  it('should be called once in "add"', () => {
+    calculator.add(40, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(40, 2);
     });
 
-    it('should be called once in "subtract"', () => {
-        calculator.subtract(44, 2);
-        expect(calculator._check).to.have.been.calledOnce;
-        expect(calculator._check).to.have.been.calledWith(44, 2);
+  it('should be called once in "subtract"', () => {
+    calculator.subtract(44, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(44, 2);
     });
 
     it('should be called once in "multiply"', () => {
