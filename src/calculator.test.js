@@ -38,61 +38,61 @@ describe('_check', () => {
     });
 
     it('should be called once in "divide"', () => {
-        calculator.divide(84, 2);
-        expect(calculator._check).to.have.been.calledOnce;
-        expect(calculator._check).to.have.been.calledWith(84, 2);
+      calculator.divide(84, 2);
+      expect(calculator._check).to.have.been.calledOnce;
+      expect(calculator._check).to.have.been.calledWith(84, 2);
     });
 });
 
 describe('add', () => {
     it('should throw a TypeError if arguments are not numbers', () => {
-        expect(() => calculator.add(40, '2')).to.throw(TypeError);
-        expect(() => calculator.add(40, [])).to.throw(TypeError);
-        expect(() => calculator.add(40, {})).to.throw(TypeError);
-        expect(() => calculator.add('40', 2)).to.throw(TypeError);
-        expect(() => calculator.add([], 2)).to.throw(TypeError);
-        expect(() => calculator.add({}, 2)).to.throw(TypeError);
+      expect(() => calculator.add(40, '2')).to.throw(TypeError);
+      expect(() => calculator.add(40, [])).to.throw(TypeError);
+      expect(() => calculator.add(40, {})).to.throw(TypeError);
+      expect(() => calculator.add('40', 2)).to.throw(TypeError);
+      expect(() => calculator.add([], 2)).to.throw(TypeError);
+      expect(() => calculator.add({}, 2)).to.throw(TypeError);
     });
 
     it('should add two positive numbers', () => {
-        expect(calculator.add(40, 2)).to.equal(42);
+      expect(calculator.add(40, 2)).to.equal(42);
     });
 
     it('should add two negative numbers', () => {
-        expect(calculator.add(-40, -2)).to.equal(-42);
+      expect(calculator.add(-40, -2)).to.equal(-42);
     });
 
     it('should add one positive number and one negative number', () => {
-        expect(calculator.add(44, -2)).to.equal(42);
+      expect(calculator.add(44, -2)).to.equal(42);
     });
 });
 
 describe('subtract', () => {
     it('should throw a TypeError if arguments are not numbers', () => {
-        expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
-        expect(() => calculator.subtract(40, [])).to.throw(TypeError);
-        expect(() => calculator.subtract(40, {})).to.throw(TypeError);
-        expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
-        expect(() => calculator.subtract([], 2)).to.throw(TypeError);
-        expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
+      expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
+      expect(() => calculator.subtract(40, [])).to.throw(TypeError);
+      expect(() => calculator.subtract(40, {})).to.throw(TypeError);
+      expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
+      expect(() => calculator.subtract([], 2)).to.throw(TypeError);
+      expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
     });
 
     it('should subtract two positive numbers', () => {
-        expect(calculator.subtract(44, 2)).to.equal(42);
+      expect(calculator.subtract(44, 2)).to.equal(42);
     });
 
     it('should subtract two negative numbers', () => {
-        expect(calculator.subtract(-44, -2)).to.equal(-42);
+      expect(calculator.subtract(-44, -2)).to.equal(-42);
     });
 
     it('should subtract one positive number and one negative number', () => {
-        expect(calculator.subtract(40, -2)).to.equal(42);
+      expect(calculator.subtract(40, -2)).to.equal(42);
     });
 });
 
 describe('multiply', () => {
     it('should throw a TypeError if arguments are not numbers', () => {
-        expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
+      expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
         expect(() => calculator.multiply(40, [])).to.throw(TypeError);
         expect(() => calculator.multiply(40, {})).to.throw(TypeError);
         expect(() => calculator.multiply('40', 2)).to.throw(TypeError);
