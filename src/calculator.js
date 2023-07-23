@@ -1,8 +1,8 @@
 exports._check = (x, y) => {
-  if (typeof x !== 'number') {
+  if (typeof x !== 'number' || isNaN(x)) {
     throw new TypeError(`${x} is not a number`);
   }
-  if (typeof y !== 'number') {
+  if (typeof y !== 'number' || isNaN(y)) {
     throw new TypeError(`${y} is not a number`);
   }
   // DRY up the codebase with this function
