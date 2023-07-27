@@ -3,7 +3,6 @@ exports._check = (x, y) => {
     throw new TypeError(`${x} is not a number`);
   }
 
-
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
