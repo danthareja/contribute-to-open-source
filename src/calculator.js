@@ -1,9 +1,13 @@
 exports._check = () => {
+  describe('_check', () => {
+    beforeEach(() => {
+      sinon.spy(calculator, '_check');
+    });
   // DRY up the codebase with this function
   // First, move the duplicate error checking code here
   // Then, invoke this function inside each of the others
   // HINT: you can invoke this function with exports._check()
-};
+
 
 exports.add = (x, y) => {
   if (typeof x !== 'number') {
