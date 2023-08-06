@@ -1,5 +1,5 @@
 exports._check = (x, y) => {
-  [x, y].forEach(curNum => {
+  [x, y].forEach((curNum) => {
     if (typeof curNum !== 'number') {
       throw new TypeError(`${curNum} is not a number`);
     }
