@@ -135,3 +135,26 @@ describe('divide', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
 });
+
+describe('modulo', () => {
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator.modulo(40, '2')).to.throw(TypeError);
+    expect(() => calculator.modulo(40, [])).to.throw(TypeError);
+    expect(() => calculator.modulo(40, {})).to.throw(TypeError);
+    expect(() => calculator.modulo('40', 2)).to.throw(TypeError);
+    expect(() => calculator.modulo([], 2)).to.throw(TypeError);
+    expect(() => calculator.modulo({}, 2)).to.throw(TypeError);
+  });
+
+  it('should modulo two positive numbers', () => {
+    expect(calculator.modulo(84, 2)).to.equal(0);
+  });
+
+  it('should modulo two negative numbers', () => {
+    expect(calculator.modulo(-84, -2)).to.equal(0);
+  });
+
+  it('should modulo one positive number and one negative number', () => {
+    expect(calculator.modulo(84, -2)).to.equal(0);
+  });
+});
