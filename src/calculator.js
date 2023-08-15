@@ -42,6 +42,8 @@ exports.divide = (x, y) => {
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
+  if (x === 0 || y === 0)
+    throw new Error(`${x}or ${y} is zero, cannot divide by zero nor  can divide zero!`);
   return x / y;
 };
 
