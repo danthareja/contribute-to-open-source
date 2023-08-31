@@ -1,7 +1,7 @@
 exports._check = (x, y) => {
   if (typeof x !== 'number' || typeof y !== 'number') {
     throw new TypeError(`${x} or ${y} is not a number`);
-  };
+  }
 };
 
 exports.add = (x, y) => {
