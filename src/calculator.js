@@ -12,26 +12,26 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  this._check(x, y);
+  exports._check(x,y);
   return x + y;
 };
 
 exports.subtract = (x, y) => {
-  this._check(x, y);
+  exports._check(x,y);
   return x - y;
 };
 
 exports.multiply = (x, y) => {
-  this._check(x, y);
+  exports._check(x,y);
   return x * y;
 };
 
 exports.divide = (x, y) => {
-  this._check(x, y);
+  exports._check(x,y);
   return x / y;
 };
 exports.mod= (x,y) =>{
-  this._check(x,y);
+  exports_check(x,y);
   return x % y;
 };
 
