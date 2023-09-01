@@ -30,5 +30,9 @@ exports.divide = (x, y) => {
   this._check(x, y);
   return x / y;
 };
+exports.mod= (x,y) =>{
+  this._check(x,y);
+  return x % y;
+};
 
 module.exports = exports;
