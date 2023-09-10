@@ -1,8 +1,8 @@
 exports._check = (x, y) => {
-  if (typeof x !== 'number'){
+  if (typeof x !== 'number') {
     throw new TypeError(`${x} must be a number`);
   }
-  if (typeof y !== 'number'){
+  if (typeof y !== 'number') {
     throw new TypeError(`${y} must be a number`);
   }
 };
