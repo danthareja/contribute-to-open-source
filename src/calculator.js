@@ -12,7 +12,7 @@ exports._check = (x, y) => {
 };
 
 exports.add = (x, y) => {
-  this._check(x, y)
+  this._check(x, y);
   return x + y;
 };
 
