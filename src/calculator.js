@@ -17,17 +17,17 @@ exports.add = (x, y) => {
 };
 
 exports.subtract = (x, y) => {
-  this._check(x, y)
+  this._check(x, y);
   return x - y;
 };
 
 exports.multiply = (x, y) => {
-  this._check(x, y)
+  this._check(x, y);
   return x * y;
 };
 
 exports.divide = (x, y) => {
-  this._check(x, y)
+  this._check(x, y);
   return x / y;
 };
 
