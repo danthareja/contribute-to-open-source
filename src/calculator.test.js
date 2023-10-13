@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
+const sinon = require('sinon');
+const expect = require('chai').expect;
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
