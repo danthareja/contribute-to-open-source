@@ -33,7 +33,7 @@ exports.multiply = (x, y) => {
     throw new TypeError(`${y} is not a number`);
   }
   return x * y;
-};
+}; // used for multiplication
 
 exports.divide = (x, y) => {
   if (typeof x !== 'number') {
@@ -43,6 +43,6 @@ exports.divide = (x, y) => {
     throw new TypeError(`${y} is not a number`);
   }
   return x / y;
-};
+};  // this is used for divison
 
 module.exports = exports;
