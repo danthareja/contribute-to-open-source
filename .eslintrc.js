@@ -12,9 +12,5 @@ module.exports = {
   plugins: ["import"],
   rules: {
     "no-underscore-dangle": 0,
-    "linebreak-style": [
-      "error",
-      process.platform === "win32" ? "windows" : "unix",
-    ],
   },
 };
