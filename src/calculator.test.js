@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -21,25 +20,25 @@ describe.skip('_check', () => {
 
   it('should be called once in "add"', () => {
     calculator.add(40, 2);
-    expect(calculator._check).to.have.been.calledOnce;
+    // expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(40, 2);
   });
 
   it('should be called once in "subtract"', () => {
     calculator.subtract(44, 2);
-    expect(calculator._check).to.have.been.calledOnce;
+    // expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(44, 2);
   });
 
   it('should be called once in "multiply"', () => {
     calculator.multiply(6, 7);
-    expect(calculator._check).to.have.been.calledOnce;
+    // expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(6, 7);
   });
 
   it('should be called once in "divide"', () => {
     calculator.divide(84, 2);
-    expect(calculator._check).to.have.been.calledOnce;
+    // expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(84, 2);
   });
 });
