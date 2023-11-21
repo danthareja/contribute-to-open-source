@@ -27,4 +27,4 @@ exports.divide = (x, y) => {
   return x / y;
 };
 
-module.exports = exports;
+// module.exports = exports;
