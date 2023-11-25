@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe.only('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -41,6 +41,12 @@ describe.skip('_check', () => {
     calculator.divide(84, 2);
     expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(84, 2);
+  });
+
+  it('should be called once in "mod"', () => {
+    calculator.divide(5, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(5, 2);
   });
 });
 
@@ -133,5 +139,28 @@ describe('divide', () => {
 
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
+  });
+});
+
+describe('mod', () => {
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator.mod(40, '2')).to.throw(TypeError);
+    expect(() => calculator.mod(40, [])).to.throw(TypeError);
+    expect(() => calculator.mod(40, {})).to.throw(TypeError);
+    expect(() => calculator.mod('40', 2)).to.throw(TypeError);
+    expect(() => calculator.mod([], 2)).to.throw(TypeError);
+    expect(() => calculator.mod({}, 2)).to.throw(TypeError);
+  });
+
+  it('should mod two positive numbers', () => {
+    expect(calculator.mod(5, 2)).to.equal(1);
+  });
+
+  it('should mod two negative numbers', () => {
+    expect(calculator.mod(-5, -2)).to.equal(-1);
+  });
+
+  it('should mod one positive number and one negative number', () => {
+    expect(calculator.mod(-5, 2)).to.equal(-1);
   });
 });
