@@ -25,7 +25,7 @@ exports.multiply = (x, y) => {
 exports.divide = (x, y) => {
   exports._check(x, y);
   if (y === 0) {
-    throw new Error("Division by zero is not allowed");
+    throw new Error('Division by zero is not allowed');
   }
   return x / y;
 };
