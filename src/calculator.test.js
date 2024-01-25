@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 const { expect } = require('chai');
