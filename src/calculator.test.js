@@ -5,6 +5,7 @@ const calculator = require('./calculator');
 describe.only('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
+    
   });
 
   afterEach(() => {

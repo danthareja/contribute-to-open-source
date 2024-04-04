@@ -21,6 +21,7 @@ exports.add = (x, y) => {
     throw new TypeError(`${y} is not a number`);
   }
   exports._check(x, y);
+  
   return x + y;
 };
 
