@@ -8,7 +8,7 @@ Thanks for your interest in contributing! Please read carefully through our guid
 
 ## Code of Conduct
 
-To hold a safe space for all contributors, we expect all project participants to adhere to our Code of Conduct. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+To hold a safe space for all contributors, we expect all project participants to adhere to our Code of Conduct. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions which will and will not be tolerated.
 
 ## Issue Tracking
 

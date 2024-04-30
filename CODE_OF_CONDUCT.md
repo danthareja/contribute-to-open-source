@@ -1,6 +1,6 @@
 > This file sets ground rules for contributors’ behavior.
 > 
-> While not every project has this file, its presence signals that this is a welcoming project to contribute to.
+> While not every project has this file, its presence signals that this is a welcome project to contribute to.
 
 # Contributor Covenant Code of Conduct
 
@@ -10,7 +10,7 @@ In the interest of fostering an open and welcoming environment, we as contributo
 
 ## Our Standards
 
-Examples of behavior that contributes to creating a positive environment include:
+Examples of behavior that contributes to creating a positive environment including:
 
 * Using welcoming and inclusive language
 * Being respectful of differing viewpoints and experiences
