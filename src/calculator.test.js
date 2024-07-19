@@ -90,7 +90,7 @@ describe('subtract', () => {
   });
 });
 
-describe("multiply", () => {
+describe('multiply', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
     expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
     expect(() => calculator.multiply(40, [])).to.throw(TypeError);
