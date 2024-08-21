@@ -1,8 +1,8 @@
-function _check(x, y){
-  if (typeof x !== 'number'){
+function _check(x, y) {
+  if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
-  if (typeof y !== 'number'){
+  if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
 }
