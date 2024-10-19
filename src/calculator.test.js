@@ -1,6 +1,17 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
+// Helper function to test TypeError for non-numeric inputs
+function shouldThrowTypeErrorForNonNumbers(fn) {
+  expect(() => fn(40, '2')).to.throw(TypeError);
+  expect(() => fn(40, [])).to.throw(TypeError);
+  expect(() => fn(40, {})).to.throw(TypeError);
+  expect(() => fn('40', 2)).to.throw(TypeError);
+  expect(() => fn([], 2)).to.throw(TypeError);
+  expect(() => fn({}, 2)).to.throw(TypeError);
+}
+
+// Test for the _check method
 describe.skip('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
@@ -11,12 +22,7 @@ describe.skip('_check', () => {
   });
 
   it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator._check(40, '2')).to.throw(TypeError);
-    expect(() => calculator._check(40, [])).to.throw(TypeError);
-    expect(() => calculator._check(40, {})).to.throw(TypeError);
-    expect(() => calculator._check('40', 2)).to.throw(TypeError);
-    expect(() => calculator._check([], 2)).to.throw(TypeError);
-    expect(() => calculator._check({}, 2)).to.throw(TypeError);
+    shouldThrowTypeErrorForNonNumbers(calculator._check);
   });
 
   it('should be called once in "add"', () => {
@@ -44,14 +50,10 @@ describe.skip('_check', () => {
   });
 });
 
+// Test for the add method
 describe('add', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.add(40, '2')).to.throw(TypeError);
-    expect(() => calculator.add(40, [])).to.throw(TypeError);
-    expect(() => calculator.add(40, {})).to.throw(TypeError);
-    expect(() => calculator.add('40', 2)).to.throw(TypeError);
-    expect(() => calculator.add([], 2)).to.throw(TypeError);
-    expect(() => calculator.add({}, 2)).to.throw(TypeError);
+    shouldThrowTypeErrorForNonNumbers(calculator.add);
   });
 
   it('should add two positive numbers', () => {
@@ -67,14 +69,10 @@ describe('add', () => {
   });
 });
 
+// Test for the subtract method
 describe('subtract', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.subtract(40, '2')).to.throw(TypeError);
-    expect(() => calculator.subtract(40, [])).to.throw(TypeError);
-    expect(() => calculator.subtract(40, {})).to.throw(TypeError);
-    expect(() => calculator.subtract('40', 2)).to.throw(TypeError);
-    expect(() => calculator.subtract([], 2)).to.throw(TypeError);
-    expect(() => calculator.subtract({}, 2)).to.throw(TypeError);
+    shouldThrowTypeErrorForNonNumbers(calculator.subtract);
   });
 
   it('should subtract two positive numbers', () => {
@@ -90,14 +88,10 @@ describe('subtract', () => {
   });
 });
 
+// Test for the multiply method
 describe('multiply', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.multiply(40, '2')).to.throw(TypeError);
-    expect(() => calculator.multiply(40, [])).to.throw(TypeError);
-    expect(() => calculator.multiply(40, {})).to.throw(TypeError);
-    expect(() => calculator.multiply('40', 2)).to.throw(TypeError);
-    expect(() => calculator.multiply([], 2)).to.throw(TypeError);
-    expect(() => calculator.multiply({}, 2)).to.throw(TypeError);
+    shouldThrowTypeErrorForNonNumbers(calculator.multiply);
   });
 
   it('should multiply two positive numbers', () => {
@@ -113,14 +107,10 @@ describe('multiply', () => {
   });
 });
 
+// Test for the divide method
 describe('divide', () => {
   it('should throw a TypeError if arguments are not numbers', () => {
-    expect(() => calculator.divide(40, '2')).to.throw(TypeError);
-    expect(() => calculator.divide(40, [])).to.throw(TypeError);
-    expect(() => calculator.divide(40, {})).to.throw(TypeError);
-    expect(() => calculator.divide('40', 2)).to.throw(TypeError);
-    expect(() => calculator.divide([], 2)).to.throw(TypeError);
-    expect(() => calculator.divide({}, 2)).to.throw(TypeError);
+    shouldThrowTypeErrorForNonNumbers(calculator.divide);
   });
 
   it('should divide two positive numbers', () => {
@@ -135,3 +125,9 @@ describe('divide', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
 });
+
+
+// Key Changes:
+// Helper Function: shouldThrowTypeErrorForNonNumbers(fn) is created to reduce redundancy in testing the TypeError for non-numeric inputs. This is reused across all the methods.
+// Readability: Tests are now more concise due to the centralization of error tests, making the code easier to understand and maintain.
+// Maintainability: In case you need to update the way you test for TypeError or add additional checks, you only need to modify the helper function.
