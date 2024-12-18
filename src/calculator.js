@@ -45,4 +45,20 @@ exports.divide = (x, y) => {
   return x / y;
 };
 
+//squaring of two numbers
+exports.square = (x) => {
+  if (typeof x !== 'number') {
+    throw new TypeError(`${x} is not a number`);
+  }
+  return x * x;
+};
+
+
+exports.square = (y) => {
+  if (typeof y !== 'number') {
+    throw new TypeError(`${y} is not a number`);
+  }
+  return y * y;
+};
+
 module.exports = exports;
