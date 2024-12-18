@@ -5,44 +5,55 @@ exports._check = () => {
   // HINT: you can invoke this function with exports._check()
 };
 
-exports.add = (x, y) => {
+// The helper function to check if inputs are numbers
+exports._check = (x, y) => {
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
+};
+
+// Add function using _check
+exports.add = (x, y) => {
+  exports._check(x, y); // Check inputs
   return x + y;
 };
 
+// Subtract function using _check
 exports.subtract = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
-  }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
+  exports._check(x, y); // Check inputs
   return x - y;
 };
 
+// Multiply function using _check
 exports.multiply = (x, y) => {
-  if (typeof x !== 'number') {
-    throw new TypeError(`${x} is not a number`);
-  }
-  if (typeof y !== 'number') {
-    throw new TypeError(`${y} is not a number`);
-  }
+  exports._check(x, y); // Check inputs
   return x * y;
 };
 
+// Divide function using _check
 exports.divide = (x, y) => {
+  exports._check(x, y); // Check inputs
+  return x / y;
+};
+
+
+exports.square = (x) => {
   if (typeof x !== 'number') {
     throw new TypeError(`${x} is not a number`);
   }
+  return x * x;
+};
+
+
+exports.square = (y) => {
   if (typeof y !== 'number') {
     throw new TypeError(`${y} is not a number`);
   }
-  return x / y;
+  return y * y;
 };
+
 
 module.exports = exports;
