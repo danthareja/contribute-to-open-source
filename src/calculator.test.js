@@ -17,12 +17,20 @@ describe.skip('_check', () => {
     expect(() => calculator._check('40', 2)).to.throw(TypeError);
     expect(() => calculator._check([], 2)).to.throw(TypeError);
     expect(() => calculator._check({}, 2)).to.throw(TypeError);
+    expect(() => calculator._check({}, 4)).to.throw(TypeError);
+    expect(() => calculator._check(0, '2')).to.throw(TypeError);
   });
 
   it('should be called once in "add"', () => {
     calculator.add(40, 2);
     expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(40, 2);
+  });
+
+  it('should be called once in "add"', () => {
+    calculator.add(30, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(30, 2);
   });
 
   it('should be called once in "subtract"', () => {
@@ -80,6 +88,10 @@ describe('subtract', () => {
   it('should subtract two positive numbers', () => {
     expect(calculator.subtract(44, 2)).to.equal(42);
   });
+  
+  it('should subtract two positive numbers', () => {
+    expect(calculator.subtract(45, 2)).to.equal(43);
+  });
 
   it('should subtract two negative numbers', () => {
     expect(calculator.subtract(-44, -2)).to.equal(-42);
@@ -133,5 +145,8 @@ describe('divide', () => {
 
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
+  });
+  it('should divide one positive number and one negative number', () => {
+    expect(calculator.divide(100, -2)).to.equal(-50);
   });
 });
