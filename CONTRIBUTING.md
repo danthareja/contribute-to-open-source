@@ -1,6 +1,6 @@
 > Guess you're a contributor now!
 >
-> **This is the most important file for you to read as a contributor.** If written well, this file will explain *everything* you need to know in order to successfully contribute to the project. If a project *does not* have this file, you should ask for guidelines by opening an issue.
+> **This is the most important file for you to read as a contributor.** If written well, this file will explain *everything* you need to know to successfully contribute to the project. If a project *does not* have this file, you should ask for guidelines by opening an issue.
 
 # Contributing
 
@@ -26,7 +26,7 @@ Our linter will catch most styling issues that may exist in your code. You can c
 
 ## Build the project locally
 
-In order to contribute to a project on GitHub, you must first get a copy of the project running locally on your computer. This process is sometimes called a "build process", and every project's process will have different requirements. Some requirements are due to the project being hosted on GitHub, some are due to the programming language used, some are due to the project's dependencies.
+To contribute to a project on GitHub, you must first get a copy of the project running locally on your computer. This process is sometimes called a "build process", and every project's process will have different requirements. Some requirements are due to the project being hosted on GitHub, some are due to the programming language used, and some are due to the project's dependencies.
 
 There are five steps to building this project:
 
@@ -42,9 +42,9 @@ Once you get the project built, see if you can fix some [issues](https://github.
 
 > **If you've never written JavaScript before, don't sweat!** This exercise only requires fundamental language skills, you should be able to adapt from your favorite language.
 
-All GitHub projects are backed by a version control software called *Git*. You'll need to [set up Git](https://github.com/danthareja/contribute-to-open-source/wiki/Setting-up-Git) in order to contribute to *any* project on GitHub.
+All GitHub projects are backed by a version control software called *Git*. You'll need to [set up Git](https://github.com/danthareja/contribute-to-open-source/wiki/Setting-up-Git) to contribute to *any* project on GitHub.
 
-This specific project is written in JavaScript and uses Node.js as it's runtime. You'll need to [install Node.js](https://nodejs.org/en/) in order to run the project.
+This specific project is written in JavaScript and uses Node.js as its runtime. You'll need to [install Node.js](https://nodejs.org/en/) to run the project.
 
 ### Fork the repository
 
@@ -70,13 +70,13 @@ The beauty of open source is that you can install and use code that other people
 
 This project uses [npm](https://www.npmjs.com/), a command-line tool bundled with Node.js, to maintain third-party dependencies.
 
-First, navigate into the project's directory
+First, navigate to the project's directory
 
 ```
 $ cd contribute-to-open-source
 ```
 
-Next, use `npm` to install the project' dependencies
+Next, use `npm` to install the project's dependencies
 ```
 $ npm install
 ```
@@ -95,14 +95,14 @@ Run an automated test suite
 $ npm test
 ```
 
-Run an automate test suite *and* re-run the tests when a file changes
+Run an automated test suite *and* re-run the tests when a file changes
 ```
 $ npm test -- --watch
 ```
 
 ## Submit a Pull Request
 
-Remember how making changes on a *fork* doesn't affect the original code? Well, in order to fix an issue in the main project, you *want* to change the original code. A *pull request* is a GitHub feature that lets you do just that!
+Remember how making changes on a *fork* doesn't affect the original code? Well, to fix an issue in the main project, you *want* to change the original code. A *pull request* is a GitHub feature that lets you do just that!
 
 There are three steps to submitting a pull request:
 1. [Save your changes locally](#save-your-changes-locally)
@@ -134,7 +134,7 @@ Finally, save your staged files.
 $ git commit -m "Implement _check"
 ```
 
-You'll often hear this process called *committing* changes. It's the exact same thing.
+You'll often hear this process called *committing* changes. It's the same thing.
 
 ### Send your changes to your fork
 
@@ -153,7 +153,7 @@ $ git push origin master
 ![pr](https://user-images.githubusercontent.com/6980359/32564814-90b55e68-c472-11e7-8901-ae03d8151cb0.png)
 4. Click **Create Pull Request**
 
-###### <sup>*</sup> This is a weird requirement. In the real-world, most projects will expect you to open a Pull Request against the `master` base branch. Can you guess why it's needed here?
+###### <sup>*</sup> This is a weird requirement. In the real world, most projects will expect you to open a Pull Request against the `master` base branch. Can you guess why it's needed here?
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT license.
+By contributing, you agree that your contributions will be licensed under the MIT license.
