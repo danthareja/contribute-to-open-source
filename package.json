@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "chai": "^4.0.0",
-    "eslint": "^3.18.0",
+    "eslint": "^9.25.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.8.0",
-    "mocha": "^3.4.2",
+    "mocha": "^11.1.0",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0"
   }
