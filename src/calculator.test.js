@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const calculator = require('./calculator');
 
-describe.skip('_check', () => {
+describe('_check', () => {
   beforeEach(() => {
     sinon.spy(calculator, '_check');
   });
@@ -39,6 +39,12 @@ describe.skip('_check', () => {
 
   it('should be called once in "divide"', () => {
     calculator.divide(84, 2);
+    expect(calculator._check).to.have.been.calledOnce;
+    expect(calculator._check).to.have.been.calledWith(84, 2);
+  });
+
+  it('should be called once in "modulus"', () => {
+    calculator.modulus(84, 2);
     expect(calculator._check).to.have.been.calledOnce;
     expect(calculator._check).to.have.been.calledWith(84, 2);
   });
@@ -133,5 +139,28 @@ describe('divide', () => {
 
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
+  });
+});
+
+describe('modulus', () => {
+  it('should throw a TypeError if arguments are not numbers', () => {
+    expect(() => calculator.modulus(40, '2')).to.throw(TypeError);
+    expect(() => calculator.modulus(40, [])).to.throw(TypeError);
+    expect(() => calculator.modulus(40, {})).to.throw(TypeError);
+    expect(() => calculator.modulus('40', 2)).to.throw(TypeError);
+    expect(() => calculator.modulus([], 2)).to.throw(TypeError);
+    expect(() => calculator.modulus({}, 2)).to.throw(TypeError);
+  });
+
+  it('should divide two positive numbers', () => {
+    expect(calculator.modulus(84, 2)).to.equal(0);
+  });
+
+  it('should divide two negative numbers', () => {
+    expect(calculator.modulus(-84, -2)).to.equal(0);
+  });
+
+  it('should divide one positive number and one negative number', () => {
+    expect(calculator.modulus(84, -2)).to.equal(0);
   });
 });
